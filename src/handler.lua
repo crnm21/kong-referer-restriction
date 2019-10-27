@@ -6,7 +6,7 @@ local HttpFilterHandler = BasePlugin:extend()
 
 -- handle redirect after ip-restriction, bot-detection, cors - but before jwt and other authentication plugins
 -- see https://docs.konghq.com/0.14.x/plugin-development/custom-logic/
-HttpFilterHandler.PRIORITY = 1300
+HttpFilterHandler.PRIORITY = 1002
 
 
 function HttpFilterHandler:new()
