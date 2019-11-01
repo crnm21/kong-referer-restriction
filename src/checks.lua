@@ -5,7 +5,7 @@ function _M.matches_one_of(str, patterns)
         return false
     end
     for _, pattern in ipairs(patterns) do
-        if string.find(str, pattern) then
+        if string.match(str, pattern) then
             return true
         end
     end
