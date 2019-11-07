@@ -21,6 +21,9 @@ function _M.is_allowed_referer(referer, allowed_referer_patterns)
         -- if no patterns is configured or table is empty then no check is done -> everything is allowed
         return true
     end
+    if kong.request.get_path() == "/robots.txt" then
+        return true
+    end
     if referer == nil then
         return false
     end
